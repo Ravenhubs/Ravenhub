@@ -1,211 +1,214 @@
+-- Check for Delta
 if delta and delta.create then
-   -- Use Delta's UI library if available
-   local Window = delta.create({
-      Title = "Raven",
-      Theme = "Dark"
-   })
+    local Window = delta.create({
+        Title = "Raven",
+        Theme = "Dark"
+    })
 
-   -- BLOX FRUIT SECTION --
-   local Tab = Window:tab({
-      Title = "Bloxfruit"
-   })
+    -- BLOX FRUIT SECTION --
+    local Tab = Window:tab({
+        Title = "Bloxfruit"
+    })
 
-   Tab:button({
-      Title = "RedZ",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-      end
-   })
+    Tab:button({
+        Title = "RedZ",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+        end
+    })
 
-   Tab:button({
-      Title = "W-azure",
-      Callback = function()
-         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-      end
-   })
+    Tab:button({
+        Title = "W-azure",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+        end
+    })
 
-   Tab:button({
-      Title = "More script soon",
-      Callback = function()
-         print("Iloveu")
-      end
-   })
+    Tab:button({
+        Title = "More script soon",
+        Callback = function()
+            print("Iloveu")
+        end
+    })
 
-   -- DOORS SECTION --
-   local Tab2 = Window:tab({
-      Title = "Doors"
-   })
+    -- DOORS SECTION --
+    local Tab2 = Window:tab({
+        Title = "Doors"
+    })
 
-   Tab2:button({
-      Title = "Doors floor 1",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
-      end
-   })
+    Tab2:button({
+        Title = "Doors floor 1",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+        end
+    })
 
-   Tab2:button({
-      Title = "Doors floor 2",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
-      end
-   })
+    Tab2:button({
+        Title = "Doors floor 2",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+        end
+    })
 
-   -- FISCH SECTION --
-   local Tab3 = Window:tab({
-      Title = "Fisch"
-   })
+    -- FISCH SECTION --
+    local Tab3 = Window:tab({
+        Title = "Fisch"
+    })
 
-   Tab3:button({
-      Title = "Speed hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-      end
-   })
+    Tab3:button({
+        Title = "Speed hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+        end
+    })
 
-   Tab3:button({
-      Title = "Bonk hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
-      end
-   })
+    Tab3:button({
+        Title = "Bonk hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+        end
+    })
 
-   delta.notify("Raven Script Loaded", "Your script is running on Delta Executor!")
+    delta.notify("Raven Script Loaded", "Your script is running on Delta Executor!")
 
+-- Check for Codex
 elseif codex then
-   -- Use Codex with Rayfield fallback
-   local Window = Rayfield:CreateWindow({
-      Name = "Raven",
-      LoadingTitle = "projected by raven",
-      LoadingSubtitle = "by ray",
-      Theme = "Default",
-   })
+    local Window = Rayfield:CreateWindow({
+        Name = "Raven",
+        LoadingTitle = "projected by raven",
+        LoadingSubtitle = "by ray",
+        Theme = "Default",
+    })
 
-   -- BLOX FRUIT SECTION --
-   local Tab = Window:CreateTab("Bloxfruit", 4483362458)
+    -- BLOX FRUIT SECTION --
+    local Tab = Window:CreateTab("Bloxfruit", 4483362458)
 
-   local Button = Tab:CreateButton({
-      Name = "RedZ",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-      end,
-   })
+    local Button = Tab:CreateButton({
+        Name = "RedZ",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+        end,
+    })
 
-   local Button = Tab:CreateButton({
-      Name = "W-azure",
-      Callback = function()
-         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-      end,
-   })
+    local Button = Tab:CreateButton({
+        Name = "W-azure",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+        end,
+    })
 
-   local Button = Tab:CreateButton({
-      Name = "More script soon",
-      Callback = function()
-         print("Iloveu")
-      end,
-   })
+    local Button = Tab:CreateButton({
+        Name = "More script soon",
+        Callback = function()
+            print("Iloveu")
+        end,
+    })
 
-   -- DOORS SECTION --
-   local Tab2 = Window:CreateTab("Doors", 4483362458)
+    -- DOORS SECTION --
+    local Tab2 = Window:CreateTab("Doors", 4483362458)
 
-   local Button = Tab2:CreateButton({
-      Name = "Doors floor 1",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
-      end,
-   })
+    local Button = Tab2:CreateButton({
+        Name = "Doors floor 1",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+        end,
+    })
 
-   local Button = Tab2:CreateButton({
-      Name = "Doors floor 2",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
-      end,
-   })
+    local Button = Tab2:CreateButton({
+        Name = "Doors floor 2",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+        end,
+    })
 
-   -- FISCH SECTION --
-   local Tab3 = Window:CreateTab("Fisch", 4483362458)
+    -- FISCH SECTION --
+    local Tab3 = Window:CreateTab("Fisch", 4483362458)
 
-   local Button = Tab3:CreateButton({
-      Name = "Speed hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-      end,
-   })
+    local Button = Tab3:CreateButton({
+        Name = "Speed hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+        end,
+    })
 
-   local Button = Tab3:CreateButton({
-      Name = "Bonk hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
-      end,
-   })
+    local Button = Tab3:CreateButton({
+        Name = "Bonk hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+        end,
+    })
 
-   codex.notify("Raven Script Loaded", "Your script is running on Codex Executor!")
+    codex.notify("Raven Script Loaded", "Your script is running on Codex Executor!")
+
+-- Check for Solara
+elseif solara then
+    local Window = Rayfield:CreateWindow({
+        Name = "Raven",
+        LoadingTitle = "projected by raven",
+        LoadingSubtitle = "by ray",
+        Theme = "Default",
+    })
+
+    -- BLOX FRUIT SECTION --
+    local Tab = Window:CreateTab("Bloxfruit", 4483362458)
+
+    local Button = Tab:CreateButton({
+        Name = "RedZ",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+        end,
+    })
+
+    local Button = Tab:CreateButton({
+        Name = "W-azure",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+        end,
+    })
+
+    local Button = Tab:CreateButton({
+        Name = "More script soon",
+        Callback = function()
+            print("Iloveu")
+        end,
+    })
+
+    -- DOORS SECTION --
+    local Tab2 = Window:CreateTab("Doors", 4483362458)
+
+    local Button = Tab2:CreateButton({
+        Name = "Doors floor 1",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+        end,
+    })
+
+    local Button = Tab2:CreateButton({
+        Name = "Doors floor 2",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+        end,
+    })
+
+    -- FISCH SECTION --
+    local Tab3 = Window:CreateTab("Fisch", 4483362458)
+
+    local Button = Tab3:CreateButton({
+        Name = "Speed hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+        end,
+    })
+
+    local Button = Tab3:CreateButton({
+        Name = "Bonk hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+        end,
+    })
+
+    solara.notify("Raven Script Loaded", "Your script is running on Solara Executor!")
 
 else
-   -- Default to Rayfield if no specific executor detected
-   local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
-   local Window = Rayfield:CreateWindow({
-      Name = "Raven",
-      LoadingTitle = "projected by raven",
-      LoadingSubtitle = "by ray",
-      Theme = "Default",
-   })
-
-   -- BLOX FRUIT SECTION --
-   local Tab = Window:CreateTab("Bloxfruit", 4483362458)
-
-   local Button = Tab:CreateButton({
-      Name = "RedZ",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-      end,
-   })
-
-   local Button = Tab:CreateButton({
-      Name = "W-azure",
-      Callback = function()
-         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-      end,
-   })
-
-   local Button = Tab:CreateButton({
-      Name = "More script soon",
-      Callback = function()
-         print("Iloveu")
-      end,
-   })
-
-   -- DOORS SECTION --
-   local Tab2 = Window:CreateTab("Doors", 4483362458)
-
-   local Button = Tab2:CreateButton({
-      Name = "Doors floor 1",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
-      end,
-   })
-
-   local Button = Tab2:CreateButton({
-      Name = "Doors floor 2",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
-      end,
-   })
-
-   -- FISCH SECTION --
-   local Tab3 = Window:CreateTab("Fisch", 4483362458)
-
-   local Button = Tab3:CreateButton({
-      Name = "Speed hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-      end,
-   })
-
-   local Button = Tab3:CreateButton({
-      Name = "Bonk hub",
-      Callback = function()
-         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
-      end,
-   })
+    print("No supported executor found.")
 end
