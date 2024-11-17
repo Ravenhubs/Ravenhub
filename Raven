@@ -61,7 +61,7 @@ Rayfield:Notify({
 })
 
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "RedZ",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))() 
    end,
