@@ -1,127 +1,211 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+if delta and delta.create then
+   -- Use Delta's UI library if available
+   local Window = delta.create({
+      Title = "Raven",
+      Theme = "Dark"
+   })
 
-local Window = Rayfield:CreateWindow({
-   Name = "Raven",
-   LoadingTitle = "projected by raven",
-   LoadingSubtitle = "by ray",
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   -- BLOX FRUIT SECTION --
+   local Tab = Window:tab({
+      Title = "Bloxfruit"
+   })
 
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+   Tab:button({
+      Title = "RedZ",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+      end
+   })
 
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
+   Tab:button({
+      Title = "W-azure",
+      Callback = function()
+         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+      end
+   })
 
-   Discord = {
-      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "https://discord.gg/tgDgHgyBEz", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
+   Tab:button({
+      Title = "More script soon",
+      Callback = function()
+         print("Iloveu")
+      end
+   })
 
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
+   -- DOORS SECTION --
+   local Tab2 = Window:tab({
+      Title = "Doors"
+   })
 
--- BLOX FRUIT SECTION --
+   Tab2:button({
+      Title = "Doors floor 1",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+      end
+   })
 
-local Tab = Window:CreateTab("Bloxfruit", 4483362458) -- Title, Image
+   Tab2:button({
+      Title = "Doors floor 2",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+      end
+   })
 
-local Section = Tab:CreateSection("Section Example")
+   -- FISCH SECTION --
+   local Tab3 = Window:tab({
+      Title = "Fisch"
+   })
 
-Section:Set("Section Example")
+   Tab3:button({
+      Title = "Speed hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+      end
+   })
 
-local Divider = Tab:CreateDivider()
+   Tab3:button({
+      Title = "Bonk hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+      end
+   })
 
-Rayfield:Notify({
-   Title = "Notification Title",
-   Content = "Notification Content",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
+   delta.notify("Raven Script Loaded", "Your script is running on Delta Executor!")
 
-      Ignore = { -- Duplicate this table (or remove it) to add and remove buttons to the notification.
-         Name = "Okay!",
-         Callback = function()
-            print("The user tapped Okay!")
-         end
-      },
+elseif codex then
+   -- Use Codex with Rayfield fallback
+   local Window = Rayfield:CreateWindow({
+      Name = "Raven",
+      LoadingTitle = "projected by raven",
+      LoadingSubtitle = "by ray",
+      Theme = "Default",
+   })
 
-},
-})
+   -- BLOX FRUIT SECTION --
+   local Tab = Window:CreateTab("Bloxfruit", 4483362458)
 
-local Button = Tab:CreateButton({
-   Name = "RedZ",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))() 
-   end,
-})
+   local Button = Tab:CreateButton({
+      Name = "RedZ",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+      end,
+   })
 
-local Button = Tab:CreateButton({
-   Name = "W-azure",
-   Callback = function()
- loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-   end,
-})
+   local Button = Tab:CreateButton({
+      Name = "W-azure",
+      Callback = function()
+         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+      end,
+   })
 
-local Button = Tab:CreateButton({
-   Name = "More script soon",
-   Callback = function()
-   Print("Iloveu")
-   end,
-})
+   local Button = Tab:CreateButton({
+      Name = "More script soon",
+      Callback = function()
+         print("Iloveu")
+      end,
+   })
 
--- DOORS SECTION --
+   -- DOORS SECTION --
+   local Tab2 = Window:CreateTab("Doors", 4483362458)
 
-local Tab = Window:CreateTab("Doors", 4483362458) -- Title, Image
+   local Button = Tab2:CreateButton({
+      Name = "Doors floor 1",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+      end,
+   })
 
-local Section = Tab:CreateSection("Choose")
+   local Button = Tab2:CreateButton({
+      Name = "Doors floor 2",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+      end,
+   })
 
-local Divider = Tab:CreateDivider()
+   -- FISCH SECTION --
+   local Tab3 = Window:CreateTab("Fisch", 4483362458)
 
-local Button = Tab:CreateButton({
-   Name = "Doors floor 1",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
-   end,
-})
+   local Button = Tab3:CreateButton({
+      Name = "Speed hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+      end,
+   })
 
-local Button = Tab:CreateButton({
-   Name = "Doors floor 2",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
-   end,
-})
+   local Button = Tab3:CreateButton({
+      Name = "Bonk hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+      end,
+   })
 
--- FISCH SECTION --
+   codex.notify("Raven Script Loaded", "Your script is running on Codex Executor!")
 
-local Tab = Window:CreateTab("Fisch", 4483362458) -- Title, Image
+else
+   -- Default to Rayfield if no specific executor detected
+   local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Section = Tab:CreateSection("Choose")
+   local Window = Rayfield:CreateWindow({
+      Name = "Raven",
+      LoadingTitle = "projected by raven",
+      LoadingSubtitle = "by ray",
+      Theme = "Default",
+   })
 
-local Divider = Tab:CreateDivider()
+   -- BLOX FRUIT SECTION --
+   local Tab = Window:CreateTab("Bloxfruit", 4483362458)
 
-local Button = Tab:CreateButton({
-   Name = "Speed hub",
-   Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-   end,
-})
+   local Button = Tab:CreateButton({
+      Name = "RedZ",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+      end,
+   })
 
-local Button = Tab:CreateButton({
-   Name = "Bonk hub",
-   Callback = function()
-   
-loadstring(game:HttpGet("https://bonkhubloader.netlify.app",true))()
-   end,
-})
+   local Button = Tab:CreateButton({
+      Name = "W-azure",
+      Callback = function()
+         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+      end,
+   })
+
+   local Button = Tab:CreateButton({
+      Name = "More script soon",
+      Callback = function()
+         print("Iloveu")
+      end,
+   })
+
+   -- DOORS SECTION --
+   local Tab2 = Window:CreateTab("Doors", 4483362458)
+
+   local Button = Tab2:CreateButton({
+      Name = "Doors floor 1",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+      end,
+   })
+
+   local Button = Tab2:CreateButton({
+      Name = "Doors floor 2",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+      end,
+   })
+
+   -- FISCH SECTION --
+   local Tab3 = Window:CreateTab("Fisch", 4483362458)
+
+   local Button = Tab3:CreateButton({
+      Name = "Speed hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+      end,
+   })
+
+   local Button = Tab3:CreateButton({
+      Name = "Bonk hub",
+      Callback = function()
+         loadstring(game:HttpGet("https://bonkhubloader.netlify.app", true))()
+      end,
+   })
+end
